@@ -1,0 +1,198 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,400);
+
+.photo-album .box02{
+    margin-bottom: 0px !important;
+    position: relative;
+}
+
+.photo-album .photo{
+    margin-bottom: 30px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.photo-album .cover {
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin-left:15px;
+    width: 90%;
+    height: 100%;
+    z-index: 100;
+    padding: 10%;
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.0);
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.photo-album .cover h4 {
+    color: rgba(255,255,255,0.0);
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.photo-album .photo:hover .cover{
+    cursor: pointer;
+    visibility: visible;
+    background-color: rgba(50,50,50,0.6);
+    color: rgba(255,255,255,1.0);
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.photo-album .photo:hover .cover h4 {
+    color: rgba(255,255,255,1.0);
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.lightbox {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    display: none;
+}
+
+.lightbox > .image {
+    background: #fff;
+    width: 40%;
+    display: block;
+    position: static;
+    margin-left:auto;
+    margin-top: 20vh;
+    margin-right:auto;
+    box-sizing: border-box;
+    padding: 15px;
+    display: none;
+}
+
+.lightbox > .image > img {
+    max-width:100% !important;
+    height:auto;
+    overflow: visible;
+}
+
+.lightbox > .image > .description {
+    width: 100%;
+}
+
+.lightbox > .image > h4 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 100%;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px !important;
+    margin-top: 5px!important;
+}
+
+.lightbox > .image > .description > p {
+    font-size: 12px;
+    line-height: 12px;
+    width: 80%;
+    text-align: left;
+    display: inline-block;
+    
+    color: #777;
+}
+
+.lightbox > .image > .description > .close {
+    width: 17%;
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 400;
+    text-align: right;
+}
+
+.lightbox > .image > .description > .close:hover {
+    cursor: pointer;
+}
+
+body.noscroll {
+    position:fixed;
+    height: 100%;
+    overflow:hidden;
+}
+
+.box02.bg_cstm {
+    background-size: cover;
+}
+
+/*=======================
+======= Queries =========
+========================*/
+
+@media screen and (max-width: 1310px) and (min-width: 840px) {
+    .lightbox > .image {
+        width: 50%;
+    }
+    .lightbox > .image > .description > .close {
+        width: 25%;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
+    .lightbox > .image > .description > p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 839px) and (min-width: 560px) {
+    .lightbox > .image {
+        width: 60%;
+    }
+    .lightbox > .image > .description > .close {
+        width: 25%;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
+    .lightbox > .image > .description > p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .lightbox > .image {
+        width: 60%;
+    }
+    .lightbox > .image > h4 {
+       text-align: center;
+    }
+    .lightbox > .image > .description > .close { 
+        width: 25%;
+        font-size: 20px;
+        line-height: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .lightbox > .image > .description > p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+}
